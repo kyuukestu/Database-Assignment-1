@@ -15,6 +15,7 @@ CREATE TABLE `Appointment` (
   `appointmentNumber` int NOT NULL AUTO_INCREMENT,
   `doctorID` int NOT NULL,
   `patientID` int NOT NULL,
+  `date` int NOT NULL,
   `Diagnosis` varchar(100) NOT NULL,
   `prescription` varchar(100) NOT NULL,
   PRIMARY KEY (`appointmentNumber`)
