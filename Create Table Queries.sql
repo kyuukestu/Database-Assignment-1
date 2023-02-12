@@ -3,14 +3,14 @@ CREATE TABLE `Patient`(
   `firstName` varchar(25) NOT NULL,
   `lastName` varchar(25) NOT NULL,
   `age` int NOT NULL,
-  `phoneNumber` int NOT NULL,
+  `phoneNumber` varchar(10) NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
   `treatmentCost` int NOT NULL,
   `treatment` varchar(50) NOT NULL,
   `doctorID` int NOT NULL,
   `appointmentNumber` int NOT NULL,
   PRIMARY KEY (`patientID`)
-)
+);
 
 CREATE TABLE `Appointment` (
   `appointmentNumber` int NOT NULL,
