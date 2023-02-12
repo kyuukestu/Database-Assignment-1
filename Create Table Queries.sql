@@ -9,7 +9,7 @@ CREATE TABLE `Patient`(
   `treatment` varchar(50) NOT NULL,
   `doctorID` int NOT NULL,
   `appointmentNumber` int NOT NULL,
-PRIMARY KEY (`patientID`)
+  PRIMARY KEY (`patientID`)
 );
 
 CREATE TABLE `Appointment` (
