@@ -6,7 +6,7 @@ CREATE TABLE `Patient`(
   `phoneNumber` int NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
   `treatmentCost` int NOT NULL,
-  `surgeryType` varchar(50) NOT NULL,
+  `treatment` varchar(50) NOT NULL,
   `doctorID` int NOT NULL,
   `appointmentNumber` int NOT NULL,
 PRIMARY KEY (`patientID`)
@@ -18,7 +18,6 @@ CREATE TABLE `Appointment` (
   `patientID` int NOT NULL,
   `date` date NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
-  `prescription` varchar(100) NOT NULL,
   PRIMARY KEY (`appointmentNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
