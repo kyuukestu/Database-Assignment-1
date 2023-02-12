@@ -27,7 +27,6 @@ CREATE TABLE `Doctor` (
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
-  `appointmentNumber` int NOT NULL,
   PRIMARY KEY (`doctorID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
