@@ -1,5 +1,5 @@
 CREATE TABLE `Patient`(
-  `patientID` int AUTO_INCREMENT NOT Null,
+  `patientID` int NOT Null,
   `firstName` varchar(25) NOT NULL,
   `lastName` varchar(25) NOT NULL,
   `age` int NOT NULL,
@@ -9,20 +9,24 @@ CREATE TABLE `Patient`(
   `treatment` varchar(50) NOT NULL,
   `doctorID` int NOT NULL,
   `appointmentNumber` int NOT NULL,
-  PRIMARY KEY (`patientID`)
+  PRIMARY KEY (`patientID`),
+  FOREIGN KEY (`doctorID`) REFERENCES Doctor(`doctorID`),
+  FOREIGN KEY (`appointmentNumber`) REFERENCES Appointment(`appointmentNumber`)
 );
 
 CREATE TABLE `Appointment` (
-  `appointmentNumber` int NOT NULL AUTO_INCREMENT,
+  `appointmentNumber` int NOT NULL,
   `doctorID` int NOT NULL,
   `patientID` int NOT NULL,
   `date` date NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
-  PRIMARY KEY (`appointmentNumber`)
+  PRIMARY KEY (`appointmentNumber`),
+  FOREIGN KEY (`doctorID`) REFERENCES Doctor(`doctorID`),
+  FOREIGN KEY (`patientID`) REFERENCES Patient(`patientID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Doctor` (
-  `doctorID` int NOT NULL AUTO_INCREMENT,
+  `doctorID` int NOT NULL,
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
   `department` varchar(45) NOT NULL,
