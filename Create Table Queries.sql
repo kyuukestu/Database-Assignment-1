@@ -1,4 +1,4 @@
-CREATE TABLE `Patient`(
+CREATE TABLE IF NOT EXISTS `Patient`(
   `patientID` int NOT Null,
   `firstName` varchar(25) NOT NULL,
   `lastName` varchar(25) NOT NULL,
@@ -12,7 +12,7 @@ CREATE TABLE `Patient`(
   PRIMARY KEY (`patientID`)
 );
 
-CREATE TABLE `Appointment` (
+CREATE TABLE IF NOT EXISTS `Appointment` (
   `appointmentNumber` int NOT NULL,
   `doctorID` int NOT NULL,
   `patientID` int NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE `Appointment` (
   PRIMARY KEY (`appointmentNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `Doctor` (
+CREATE TABLE IF NOT EXISTS `Doctor` (
   `doctorID` int NOT NULL,
   `firstName` varchar(45) NOT NULL,
   `lastName` varchar(45) NOT NULL,
@@ -29,7 +29,7 @@ CREATE TABLE `Doctor` (
   PRIMARY KEY (`doctorID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
-CREATE TABLE `Finance` (
+CREATE TABLE IF NOT EXISTS `Finance` (
   `treatmentID` varchar(45) NOT NULL,
   `treatmentCost` int NOT NULL,
   `treatment` varchar(45) NOT NULL,

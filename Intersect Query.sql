@@ -4,7 +4,7 @@
 -- They have asked for the treatmentCost and treatment to be returned.
 
 SELECT treatmentCost, treatment
-FROM Patient
+FROM Patient 
 INTERSECT
 SELECT treatmentCost, treatment
 FROM Finance;
