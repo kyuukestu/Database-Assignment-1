@@ -1,21 +1,22 @@
 CREATE TABLE `Patient`(
-  `patientID` int AUTO_INCREMENT NOT Null PRIMARY KEY,
+  `patientID` int AUTO_INCREMENT NOT Null,
   `firstName` varchar(25) NOT NULL,
   `lastName` varchar(25) NOT NULL,
   `age` int NOT NULL,
   `phoneNumber` int NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
-  `hospitalBill` int NOT NULL,
+  `treatmentCost` int NOT NULL,
   `surgeryType` varchar(50) NOT NULL,
-  `assignedDoctorID` int NOT NULL,
-  `appointmentNumber` int NOT NULL
+  `doctorID` int NOT NULL,
+  `appointmentNumber` int NOT NULL,
+PRIMARY KEY (`patientID`)
 );
 
 CREATE TABLE `Appointment` (
   `appointmentNumber` int NOT NULL AUTO_INCREMENT,
   `doctorID` int NOT NULL,
   `patientID` int NOT NULL,
-  `date` int NOT NULL,
+  `date` date NOT NULL,
   `Diagnosis` varchar(100) NOT NULL,
   `prescription` varchar(100) NOT NULL,
   PRIMARY KEY (`appointmentNumber`)
