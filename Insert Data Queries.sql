@@ -36,5 +36,5 @@ INSERT INTO Finance (treatmentID,treatmentCost,treatment)
 VALUES  ('APP100',150000,'Appendectomy'),
 		('CRAN500',550000,'Craniotomy'),
 		('HERN750',75000,'Hernia Repair'),
-		('PAN177', 177000,'Pancreatectomy');
+		('PAN177', 177000,'Pancreatectomy'),
 		('HYST175', 175000,'Hysterectomy');

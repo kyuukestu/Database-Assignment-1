@@ -9,20 +9,16 @@ CREATE TABLE `Patient`(
   `treatment` varchar(50) NOT NULL,
   `doctorID` int NOT NULL,
   `appointmentNumber` int NOT NULL,
-  PRIMARY KEY (`patientID`),
-  FOREIGN KEY (`doctorID`) REFERENCES Doctor(`doctorID`),
-  FOREIGN KEY (`appointmentNumber`) REFERENCES Appointment(`appointmentNumber`)
-);
+  PRIMARY KEY (`patientID`)
+)
 
 CREATE TABLE `Appointment` (
   `appointmentNumber` int NOT NULL,
   `doctorID` int NOT NULL,
   `patientID` int NOT NULL,
-  `date` date NOT NULL,
+  `appointmentDate` date NOT NULL,
   `diagnosis` varchar(100) NOT NULL,
-  PRIMARY KEY (`appointmentNumber`),
-  FOREIGN KEY (`doctorID`) REFERENCES Doctor(`doctorID`),
-  FOREIGN KEY (`patientID`) REFERENCES Patient(`patientID`)
+  PRIMARY KEY (`appointmentNumber`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 CREATE TABLE `Doctor` (
