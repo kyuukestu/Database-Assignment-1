@@ -1,2 +1,2 @@
 Insert IGNORE INTO Patient (patientID,firstName,lastName,age,phoneNumber,diagnosis,treatmentCost,treatment,doctorID,appointmentNumber)
-VALUES (2023009, 'Trigger', 'One', '01', 8761234567, 'Appendicitis', 150000, 'Appendectomy', 1217000, 1617009);
+VALUES (2023009, NULL, 'TriggerTest', '01', 8761234567, 'Appendicitis', 150000, 'Appendectomy', 1217000, 1617009);
