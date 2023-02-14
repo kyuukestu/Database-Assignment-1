@@ -1,6 +1,6 @@
--- Patients undergoing general surgery
+-- SubQuery that selects all Patients with doctors in the general surgery department.
 
-SELECT Patient.firstName, Patient.lastName, Patient.diagnosis, Patient.treatment
+SELECT *
 FROM Patient
 Where doctorID IN
 (SELECT Doctor.doctorID FROM Doctor WHERE department = "General Surgery");

@@ -1,6 +1,6 @@
--- Return patient data for patients paying upwards of 100k  
+-- Right Join Patient & Doctor on doctorID 
 
-SELECT Patient.doctorID, Patient.firstName, Patient.lastName, Patient.age, Patient.diagnosis, Patient.treatmentCost
+SELECT Patient.patientID, Patient.firstName, Patient.age, Patient.diagnosis, Patient.treatment, Doctor.doctorID, Doctor.firstName, Doctor.lastName, Doctor.department
 FROM Patient
 RIGHT JOIN Doctor
-ON Patient.treatmentCost > 100000;
+ON Patient.doctorID = Doctor.doctorID;
