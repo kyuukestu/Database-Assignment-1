@@ -1,8 +1,6 @@
 
-CREATE DEFINER = CURRENT_USER TRIGGER `databaseSystemsAssignment1`.`Patient_BEFORE_INSERT` 
-BEFORE INSERT ON `Patient` FOR EACH ROW
+CREATE DEFINER = CURRENT_USER TRIGGER `databaseSystemsAssignment1`.`Finance_BEFORE_INSERT` 
+BEFORE INSERT ON `Finance` FOR EACH ROW
 BEGIN
-    IF new.firstName IS NULL THEN
-    SET new.firstName = "Name Mandatory";
-    END IF;
+INSERT into `audit_table` (username, audit_info, audit_date) values (CURRENT_USER, "info", CURRENT_TIME());
 END
